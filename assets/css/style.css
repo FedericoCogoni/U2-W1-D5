@@ -1,11 +1,22 @@
+/*  */
+/*  */
+/*  */
+/*  */
+/* FUNZIONANTE DA 760PX IN SU, VERSIONE MOBILE ANCORA DA REALIZZARE */
+/*  */
+/*  */
+/*  */
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 /*  TOPBAR */
-
+.topbar a:hover {
+  color: orangered;
+  cursor: pointer;
+}
 .topbar {
   position: relative;
   background-color: #ffc017;
@@ -40,7 +51,7 @@ nav {
 .topbar .logo {
   margin-left: 6rem;
 }
-#get-started {
+#getStarted {
   font-size: 1em;
   width: 120px;
   height: 45px;
@@ -48,22 +59,27 @@ nav {
   color: #fff;
   border-radius: 20px;
   border-style: none;
+}
+#getStarted:hover {
+  color: orangered;
   cursor: pointer;
 }
-
 /* header */
 header {
   position: fixed;
   width: 100%;
   font-size: 14px;
   background-color: #ffc017;
+  z-index: 99;
+  transition: background-color 500ms;
 }
 .white-bg {
   background-color: #fff;
   color: #191919;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
 }
 .green-bg {
+  transition: background-color 0.5s, color 0.5s;
   background-color: #1a8917 !important;
 }
 /*  hero-box  */
@@ -85,6 +101,7 @@ header {
   height: 100%;
 }
 .hero h1 {
+  font-family: "Spectral", sans-serif;
   font-size: 106px;
   margin-bottom: 35px;
   letter-spacing: -0.05em;
@@ -95,7 +112,9 @@ header {
 .hero h3 {
   width: 80%;
   font-size: 24px;
+  font-weight: 400;
   margin-bottom: 50px;
+  line-height: 30px;
 }
 .hero button {
   font-size: 1.4rem;
@@ -108,7 +127,10 @@ header {
   cursor: pointer;
   font-weight: 500;
 }
-
+.hero button:hover {
+  color: orangered;
+  cursor: pointer;
+}
 /* heroSvg */
 
 .heroSvg {
@@ -120,6 +142,13 @@ header {
 
 main {
   padding: 0 6rem;
+}
+main a {
+  text-decoration: none;
+  color: black;
+}
+main a:hover {
+  color: orangered;
 }
 
 /* Trending */
@@ -140,7 +169,9 @@ main {
   font-weight: 600;
 }
 .top-trending {
+  font-size: 1.5rem;
   width: 100%;
+  height: 32rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,6 +207,9 @@ main {
   border-radius: 25%;
   margin-right: 8px;
 }
+.author h5 {
+  font-size: 1.5rem;
+}
 .author a {
   font-size: 17px;
   text-decoration: none;
@@ -183,16 +217,20 @@ main {
   font-weight: bold;
 }
 .trending-cell-details h5 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 8px;
   overflow: hidden;
+}
+.edit {
+  font-size: 1rem;
 }
 .other-cell-details {
   color: gray;
   display: flex;
   font-size: 13px;
   align-items: center;
+  position: relative;
 }
 .other-cell-details img {
   margin-left: 5px;
@@ -209,6 +247,9 @@ main {
 }
 
 /* ARTICLE */
+.more-articles {
+  overflow: auto;
+}
 article {
   width: 100%;
   margin-bottom: 48px;
@@ -218,6 +259,7 @@ article {
 
 .article-details {
   margin-right: 20px;
+  width: 100%;
 }
 .article-details h5 {
   font-size: 26px;
@@ -226,6 +268,8 @@ article {
   overflow: hidden;
 }
 .article-details p {
+  font-size: 20px;
+  color: grey;
   padding-top: 4px;
   overflow: hidden;
 }
@@ -233,11 +277,10 @@ article .other-cell-details {
   padding-top: 8px;
 }
 article .other-cell-details a:last-child {
-  margin: 0 0 0 auto;
+  position: absolute;
+  right: 0;
 }
-article img {
-  margin: auto 0 0 auto;
-}
+
 .author2 {
   margin-bottom: 12px;
   align-content: center;
@@ -253,9 +296,14 @@ article img {
   color: #493c3c;
   font-weight: bold;
 }
-
+.discover-more {
+  width: 100%;
+}
 /* aside */
-
+Aside {
+  position: sticky;
+  top: 110px;
+}
 aside h3 {
   font-weight: bold;
   font-size: 25px;
@@ -273,12 +321,18 @@ aside button {
   border: none;
 }
 aside a {
+  font-size: 1rem;
   text-decoration: none;
-  color: black;
+  color: grey;
 }
 
 .nav2 button {
+  background-color: #faf7f7;
   min-width: 130px;
+  cursor: pointer;
+}
+.nav2 button:hover {
+  background-color: #e4e4e4;
 }
 .buttonsGroup .nav2 {
   padding-block: 1em;
@@ -288,19 +342,138 @@ aside a {
   display: flex;
   flex-wrap: wrap;
   column-gap: 10%;
-  row-gap: 30px;
+  row-gap: 20px;
   justify-content: space-around;
 }
 
 footer nav {
-  margin-top: 1em;
+  margin-top: 0.5em;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  row-gap: 10px;
+  column-gap: 40px;
 }
 footer a {
+  font-size: 20px;
   color: grey;
 }
 #imgreduct {
   width: 260px;
+  transition: transform 0.3s ease;
+}
+#imgreduct:hover {
+  transform: scale(1.1);
+}
+
+/* MEDIA QUERYS*/
+
+@media screen and (max-width: 1024px) {
+  .discover-more {
+    display: flex;
+    margin: 0 24px;
+  }
+  main {
+    padding: 0 3em;
+  }
+  .more-articles {
+  }
+  .bigContainer2 {
+    flex-direction: column;
+  }
+  Aside {
+    margin-block: 5rem;
+    order: -1;
+    width: 100%;
+    position: unset;
+  }
+  article {
+    width: 100%;
+  }
+  .topbar nav a {
+    padding: 10px;
+  }
+  .topbar nav a:last-child {
+    padding: 25px 1rem;
+  }
+  .hero-box {
+    padding: 25px 3rem;
+  }
+  .topbar .logo {
+    margin-left: 3rem;
+  }
+  .heroSvg {
+    position: absolute;
+    top: 95px;
+    width: 585px;
+    right: -300px;
+  }
+  .trending {
+    padding-block: 15px;
+  }
+  .top-trending {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 60rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 6%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  main {
+    padding-inline: 10px 10px;
+  }
+
+  aside h3 {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  aside {
+    margin-top: 6em;
+    height: 100%;
+    color: grey;
+  }
+  aside button {
+    width: 100%;
+    align-items: center;
+    margin-top: 0.5rem;
+    height: 3em;
+
+    border: none;
+  }
+  aside a {
+    font-size: 14px;
+    text-decoration: none;
+    color: grey;
+  }
+
+  .nav2 button {
+    background-color: #faf7f7;
+    width: 33%;
+    cursor: pointer;
+  }
+  .nav2 button:hover {
+    background-color: #e4e4e4;
+  }
+  .buttonsGroup .nav2 {
+    padding-block: 0.1em;
+    border-bottom: solid grey;
+  }
+  .nav2 {
+    justify-content: none;
+  }
+
+  footer nav {
+    margin-top: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 40px;
+  }
+  footer a {
+    font-size: 12px;
+    color: grey;
+  }
 }
